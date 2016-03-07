@@ -1,0 +1,13 @@
+{
+  "name": "scoutApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "angular-appworks": "master",
+    "angular-file-saver": "~0.7.1",
+    "ionic": "~1.1.0",
+    "appworks": "appworks-js#*"
+  }
+}

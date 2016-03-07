@@ -1,0 +1,43 @@
+<ion-modal-view>
+    <ion-footer-bar>
+        <div class="buttons">
+            <button class="button button-clear button-positive" ng-click="closeNewLocationModal()">Cancel</button>
+        </div>
+    </ion-footer-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                Add a New Location to {{expedition.title}}
+            </div>
+            <div class="card" ng-show="newLocation.coords">
+                <div class="item item-divider">
+                    Current Location
+                </div>
+                <div class="item item-text-wrap">
+                    <p>Latitude: {{newLocation.coords.latitude}}</p>
+                    <p>Longitude: {{newLocation.coords.longitude}}</p>
+                    <p>Altitude: {{newLocation.coords.altitude}}</p>
+                </div>
+            </div>
+            <label class="item item-input">
+                <input type="text" ng-model="newLocation.name" placeholder="Name">
+            </label>
+            <label class="item item-input">
+                <textarea type="text"
+                          ng-model="newLocation.notes"
+                          placeholder="Notes, description, comments"
+                          style="height: 64px;"></textarea>
+            </label>
+            <button class="button button-clear button-full button-positive" ng-click="recordCurrentLocation(newLocation)">
+                Record Current Coordinates
+            </button>
+            <div class="spacer"></div>
+            <button class="button button-full button-positive"
+                    ng-disabled="!newLocation.name"
+                    ng-click="addNewLocation(newLocation)">
+                Add Location
+            </button>
+
+        </div>
+    </ion-content>
+</ion-modal-view>

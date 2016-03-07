@@ -1,0 +1,23 @@
+{
+  "name": "appworks",
+  "version": "16.0.0b",
+  "authors": [
+    "Jason Ibrahim <jibrahim@opentext.com>"
+  ],
+  "description": "opentext mobile js library for secure storage, offline capability, device technology and more.",
+  "main": "dist/appworks.js",
+  "keywords": [
+    "opentext",
+    "appworks",
+    "javascript"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "https://developer.opentext.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

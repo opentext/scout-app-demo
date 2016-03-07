@@ -1,0 +1,38 @@
+<ion-view view-title="Expeditions">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="reload()">
+        </ion-refresher>
+        <ion-list>
+            <div style="text-align: center; padding: 4px 0 0 0; color: #7f7f7f;">
+                <p>v {{$root.version}}</p>
+            </div>
+            <div class="item item-image">
+                <img ng-src="{{image}}">
+            </div>
+            <div class="item item-divider">
+                Expeditions
+            </div>
+            <div class="item" ng-show="expeditions.length === 0">
+                No expeditions have been started
+            </div>
+            <ion-item class="item-icon-right" ng-repeat="expedition in expeditions | orderBy:'':true"
+                      type="item-text-wrap" ng-click="go('tab.expedition', {id: expedition.id})">
+
+                <h2>{{expedition.title}}</h2>
+
+                <i class="icon ion-ios-arrow-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove($index)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar ng-show="filterActive">
+        <div class="buttons">
+            <button class="button button-clear button-positive" ng-click="clearFilter()">clear filter</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

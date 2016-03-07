@@ -1,0 +1,30 @@
+{
+  "name": "angular-appworks",
+  "main": "dist/angular-appworks.js",
+  "authors": [
+    "Jason Ibrahim <jibrahim@opentext.com>"
+  ],
+  "description": "angular wrapper for the opentext appworks js library.",
+  "keywords": [
+    "angular",
+    "appworks",
+    "opentext"
+  ],
+  "license": "OpenText Inc",
+  "homepage": "https://github.com/opentext/angular-appworks",
+  "devDependencies": {
+    "angular": "~1.4.4",
+    "angular-mocks": "~1.4.4",
+    "angular-sanitize": "~1.4.4",
+    "appworks": "appworks-js#master"
+  },
+  "_release": "c7ec21ad51",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c7ec21ad51163c99170a7d4629bdc9ec3f6d421e"
+  },
+  "_source": "git://github.com/opentext/angular-appworks.git",
+  "_target": "master",
+  "_originalSource": "angular-appworks"
+}
