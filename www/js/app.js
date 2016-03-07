@@ -18,21 +18,10 @@ angular
     .module('scout')
     .run(function ($timeout, $state) {
         $timeout(function () {
-            var notificationManager = new Appworks.AWNotificationManager();
-            notificationManager.enablePushNotifications(function (notification) {
-                /*
-                    notification should have the form:
-                    {
-                        action: 'go',
-                        state: 'tab.expedition',
-                        params: {id: id}
-                    }
-                 */
-                if (notification.action && notification.state && notification.params) {
-                    $state.go('tab.expedition', {id: notification.params.id});
-                    //$state[notification.action](notification.state, notification.params);
-                }
-            });
+
+            // TODO add notification handling code here using Appworks.AWNotificationManager
+            // example code can be found in powerpoint
+
         }, 2000);
     });
 
